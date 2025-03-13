@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Test Work</title>
+    </head>
+    <body>
+        <div class="header">
+            <header>
+                <h1>Заголовок h1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </header>
+            <img src="image.png" alt="road">
+        </div>
+        <main>
+            <div class="inputs">
+                <h2>Заголовок h2</h2>
+                <div class="range">
+                    <label>Выберите диапазон</label>
+                    <div class="range_inputs">
+                        <input id="first" class="first" type="text" min="0" max="100"  placeholder="от 0">
+                        <input id="second" class="second" type="text" min="0" max="100"  placeholder="до 100">
+                    </div>
+                    <input id="range" class="range-input" type="range" min="0" max="100" value="0">
+                </div>
+                <div class="selectors_2">
+                    <div class="select_and_radio">
+                        <div class="select">
+                            <label for="select_1">Выберите select</label>
+                            <select class="select_1" id="select_1" required>
+                                <option disabled selected>Option</option>
+                                <option value="1">Vite</option>
+                                <option value="2">Webpack</option>
+                                <option value="3">Gulp</option>
+                            </select>
+                        </div>
+                        <div class="radio">
+                            <label>Выберите radio</label>
+                            <div class="radio_inputs">
+                                <label><input type="radio" name="radio" id="radio_1" value="Javascript" checked>Javascript</label>
+                                <label><input type="radio" name="radio" id="radio_2" value="PHP">PHP</label>
+                                <label><input type="radio" name="radio" id="radio_3" value="C#">C#</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="name_and_age"></div>
+                        <div class="text">
+                            <label>Введите ФИО</label>
+                            <input type="text" class="text1" id="text" placeholder="Placeholder">
+                        </div>
+                        <div class="numbers">
+                            <label>Введите возраст в цифрах</label>
+                            <input class="number" type="number" id="number" placeholder="Placeholder">
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="checkbox" required> Обязательный checkbox</label>
+                    <label><input type="checkbox" name="checkbox" > Необязательный checkbox</label>
+                </div>
+                <div class="button">
+                    <button type="submit">Отправить</button>
+                </div>
+            </div>
+            <div class="header3">
+                <h3>Заголовок h3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </main>
+        <hr>
+        <footer>
+            <p class="footer">© Лебедева Ирина Руслановна, 2001-текущий год</p>
+        </footer>
+    <script src="index.js"></script>
+    </body>
+</html>

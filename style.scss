@@ -1,0 +1,138 @@
+$font-primary: "Source Code Pro", system-ui;
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+img {
+  height: 20%;
+  max-width: 30%;
+}
+
+header {
+  margin: auto 250px;
+}
+
+main, footer {
+  margin: 50px 200px;
+}
+
+h2 {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.range {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  label {
+    width: 100%;
+    margin: 10px auto;
+    font-size: 16px;
+  }
+
+  &_inputs {
+    width: 100%;
+  }
+
+  &-input {
+    width: 350px;
+  }
+}
+
+#first, #second {
+  height: 40px;
+  width: 150px;
+  margin: 10px;
+}
+
+.selectors_2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.select_and_radio, .name_and_age {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.select {
+  label, select {
+    width: 100%;
+  }
+}
+
+.radio {
+  label, .radio-inputs {
+    width: 100%;
+  }
+}
+
+.name_and_age {
+  .text {
+    margin-right: 20px;
+  }
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 black;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 50px;
+
+  ~ p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  image {
+    width: 100%;
+    height: 220px;
+  }
+
+  header {
+    width: 100%;
+    padding-right: 0;
+  }
+}
