@@ -1,16 +1,51 @@
-const today_date = document.querySelector(".footer");
-const button = document.querySelector("button");
-const range_1 = document.querySelector(".first");
-const range_2 = document.querySelector(".second");
-const select_1 = document.querySelector(".select_1");
-const radio = document.querySelector(".radio_inputs");
-const fio = document.querySelector(".text1");
-const age = document.querySelector(".number");
-const checkbox = document.querySelector(".checkbox");
+    const form = document.querySelector(".form");
+    const popup = document.getElementById("popup");
+    const popupText = document.getElementById("popup-text");
+    const closePopup = document.getElementById("close-popup");
 
-const today = new Date().getFullYear();
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-today_date.innerText = `© Лебедева Ирина Руслановна, 2001-${today}`
+        const rangeFrom = document.getElementById("range-from").value;
+        const rangeTo = document.getElementById("range-to").value;
+        const selectElement = document.getElementById("select");
+        const selectValue = selectElement.options[selectElement.selectedIndex].text;
+        const radio =
+            document.querySelector("input[name='radio']:checked")?.value ||
+            "Не выбрано";
+        const fio = document.getElementById("fio").value;
+        const age = document.getElementById("age").value;
+
+        const checkboxes =
+            Array.from(document.querySelectorAll("input[name='checkbox']:checked"))
+                .map((checkbox) => checkbox.nextSibling.textContent.trim())
+                .join(", ") || "Не выбрано";
+
+        popupText.innerHTML = `Диапазон: от ${rangeFrom} до ${rangeTo} <br>
+        Select: ${selectValue} <br>
+        Radio: ${radio} <br>
+        ФИО: ${fio} <br>
+        Возраст: ${age} <br>
+        Выбранные checkbox: ${checkboxes}`;
+
+        popup.classList.add("show");
+    });
+
+    closePopup.addEventListener("click", function () {
+        popup.classList.remove("show");
+    });
+
+    popup.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            popup.classList.remove("show");
+        }
+    });
+
+    const currentYearSpan = document.getElementById("current-year");
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
 
 
 
